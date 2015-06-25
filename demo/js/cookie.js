@@ -1,4 +1,3 @@
-
 (function(){checkCookie()})();
 function checkCookie () {
     if (getCookieValue('cookielaw')) {
@@ -11,7 +10,7 @@ function checkCookie () {
 function getCookieValue (cookie_name) {
     var cookies = document.cookie.split(';');
     for(var i = 0; i < cookies.length; i++) {
-        if (cookies[i].split('=')[0] === 'cookielaw') {
+        if (cookies[i].split('=')[0].includes('cookielaw')) {
             if (cookies[i].split('=')[1] === '1') {
                 return true;
             } else {
